@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Selector</title>
+    <style>
+        /*Same class can be given to multiple elements ->The relation of class selector is 1:n(One class to mutliple elements).An element can also belong to multiple classes->hence its' relation to classes will be 1:m(1 element : multiple classes). Hence overall we can assume the relation between element and class(or class to element) to be m:n. The .class can be used to select a element in CSS*/
+
+        /*Below is an example of specificity in selectors-> both .red and .blue have the same specificity (0,1,0).When 2 selectors have same specificity belonging to a particular element , then the rule set that appears later is the one which is applied to the element*/
+        .red{
+            color:red;
+        }
+        .blue{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda labore dolorem, perferendis ea eveniet, recusandae unde nostrum adipisci quas quo id quaerat vel tenetur libero ratione ullam, corrupti deleniti necessitatibus est optio delectus. Hic dolore deserunt saepe ratione esse totam debitis perferendis asperiores delectus modi.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi quisquam nulla, et libero sequi sunt harum maiores dolorum iusto eaque expedita natus eum vitae voluptas. Esse, nostrum modi sit sapiente cumque maiores minima dolore explicabo ullam labore fugiat quidem ad, beatae earum nobis totam corporis soluta perferendis eaque, animi magni! Quos provident corrupti, repudiandae nobis sequi tempore soluta ut modi voluptatem facere rerum cum, maiores error. Laboriosam.</p>
+    <div>
+        <p class="red blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam doloremque iusto temporibus rerum? Totam reprehenderit cupiditate, aut a labore officia, ab pariatur ea fugiat necessitatibus iure facere distinctio magnam harum repudiandae numquam ipsam obcaecati, voluptas tempore quisquam animi. Non assumenda, quibusdam fugit debitis sit tempore, sequi similique nesciunt perspiciatis recusandae vel, dolores dolor deserunt voluptatem quisquam.</p>
+    </div>
+</body>
+</html>
