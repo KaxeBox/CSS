@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* In basic selectors we learn about 'Element selector .For example->
+        h1{
+            ...
+        }
+        Selects ALL the H1 elements present inside BODY (we do not have to mention BODY explicitly)'
+        */
+        /*In descendant combinator we use the same idea, the only difference being , we explicitly mention ki kis box ke andar dhundhna h,rather than the BODY tag which is set by default*/
+
+        /*
+    The " " (space) combinator selects nodes that are descendants of the first element.
+    Syntax: A B
+    Example: div span will match all <span> elements that are inside a <div> element.*/
+        /*visualising :search->as soon as a div is found ,we note all 'p' tag elements UNTIL '/div' is encountered*/
+        div p{
+            color:white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cum quasi quia consequuntur eaque ratione nostrum mollitia! Saepe repellendus facere esse quae officia quasi porro qui, laborum laboriosam velit! Quos, neque. Numquam quis cumque explicabo nulla, consequatur necessitatibus sed tenetur odio magnam nisi provident neque vitae, ab excepturi ipsam. A, facere eos temporibus adipisci consectetur, omnis explicabo sequi exercitationem deserunt unde nostrum iure quidem enim! Aperiam, nisi aliquam! Dicta libero iusto enim quis unde quidem adipisci, deserunt quasi quas possimus praesentium ex deleniti. Doloribus odio exercitationem libero ullam dolorem?</p>
+    </div>
+    <p>Lorem, ipsum dolor.</p>
+</body>
+</html>

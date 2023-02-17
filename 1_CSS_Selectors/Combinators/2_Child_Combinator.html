@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+    The > combinator selects nodes that are direct children of the first element.
+    Syntax: A > B
+    Example: ul > li will match all <li> elements that are nested directly inside a <ul> element.--->FIRST LEVEL CHILDREN
+ */
+ /*
+  div looks only for immediate chhildren->it looks for only 2 values ->itself i.e div or p tag, other tags if encountered are ignored.
+  Why does it look for itself? Because if it encounter another div(let's call it child div) inside it, that child div may contain it's own children, among which we may have p tag as well.
+  */
+   div>p{
+    color:red;
+ }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <div class="row">
+        <ul>
+            <li><p>P inside li</p></li>
+        </ul>
+        <p>P inside div:row</p>
+    </div>
+    <p>P inside div:container</p>
+   </div> 
+</body>
+</html>
