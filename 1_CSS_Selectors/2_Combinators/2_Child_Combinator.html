@@ -12,9 +12,12 @@
     Example: ul > li will match all <li> elements that are nested directly inside a <ul> element.--->FIRST LEVEL CHILDREN
  */
  /*
-  div looks only for immediate chhildren->it looks for only 2 values ->itself i.e div or p tag, other tags if encountered are ignored.
-  Why does it look for itself? Because if it encounter another div(let's call it child div) inside it, that child div may contain it's own children, among which we may have p tag as well.
+  
+  div will look for 1. p tag->jo uska khud ka child h, until it finds its' own closing tag(i.e </div> tag)
+  2.Look for div everywhere until it finds its' own closing tag(i.e </div> tag).Why does it look for itself? Because if it encounter another div(let's call it child div) inside it, that child div may contain it's own children, among which we may have p tag as well.
+
   */
+  /* search INSIDE div for answers */
    div>p{
     color:red;
  }
@@ -22,12 +25,22 @@
 </head>
 <body>
    <div class="container">
+<!-- div tag -->
     <div class="row">
         <ul>
             <li><p>P inside li</p></li>
         </ul>
         <p>P inside div:row</p>
     </div>
+    <!-- not a div tag -->
+        <ul>
+            <li>
+                <div>
+                    <p>I am p inside of ul li div</p>
+                </div>
+            </li>
+        </ul>
+    <!-- p tag -->
     <p>P inside div:container</p>
    </div> 
 </body>

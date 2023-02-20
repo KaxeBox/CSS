@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+         4 things to understand:
+         1. p p->interesting
+         2. something p
+         3. p something
+         4.something somethinh
+        /* 
+        The + combinator matches the second element only if it immediately follows the first element ,after the first element finishes.
+        Only one element will be matched if condition satisfies.
+
+    Syntax: A + B
+
+    Example: h2 + p will match the first <p> element that immediately follows an <h2> element.
+ */
+ /* 
+ Search after div ends for answers */
+    div + p{
+        color:red;
+    }
+</style>
+</head>
+<body>
+     <div id="first">
+        <!-- when inside 'first' we cannot yield the desired answers,since 'first' answer can only be found when 'first' ends -->
+        <span>
+            <div id="second">
+                <p>Inside second</p>
+            </div>
+            <p>After second, first p</p>
+            <ul>Ul tag</ul>
+            <p>After second, second p</p>
+        </span>
+     </div>
+     <p>After first, first p</p>
+     <p>After first, second p</p>
+
+
+    <div class="first">
+    </div>  
+    <ul>ooo</ul>
+        <p>inside first</p>
+        <p>second p</p>
+        <ul></ul>
+        <p>afer ul</p>
+    
+</body>
+</html>

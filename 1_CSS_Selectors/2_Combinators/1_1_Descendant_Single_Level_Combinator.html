@@ -19,6 +19,7 @@
     Syntax: A B
     Example: div span will match all <span> elements that are inside a <div> element.*/
         /*visualising :search->as soon as a div is found ,we note all 'p' tag elements UNTIL '/div' is encountered*/
+        /* This is easiest among all combinators to visualise */
         div p{
             color:white;
             background-color: black;
@@ -32,6 +33,7 @@
         </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cum quasi quia consequuntur eaque ratione nostrum mollitia! Saepe repellendus facere esse quae officia quasi porro qui, laborum laboriosam velit! Quos, neque. Numquam quis cumque explicabo nulla, consequatur necessitatibus sed tenetur odio magnam nisi provident neque vitae, ab excepturi ipsam. A, facere eos temporibus adipisci consectetur, omnis explicabo sequi exercitationem deserunt unde nostrum iure quidem enim! Aperiam, nisi aliquam! Dicta libero iusto enim quis unde quidem adipisci, deserunt quasi quas possimus praesentium ex deleniti. Doloribus odio exercitationem libero ullam dolorem?</p>
     </div>
+    <!-- . The CSS is not applied to the below paragraph because we have applied CSS only on the <p> tags inside div, and the below paragraph is not inside a div element. -->
     <p>Lorem, ipsum dolor.</p>
 </body>
 </html>
