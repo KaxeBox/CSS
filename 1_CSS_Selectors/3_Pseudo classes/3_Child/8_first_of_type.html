@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+     /*first-of-type is applied only to child*/
+     /* BELOW IDEA IS KIND OF CONFUSING */
+     /*for each parent classify the different tags (by types) into different boxes and maintain the order in which they appear in html doc, then see which element is required in the css selector and pick the first of that css selector's tag's box */
+     /* For example here we have div-box1, p,p, div-box2 these 4 children. Putting them into boxes(or types) we have div and p. Now looking at the selector we find that we need the p box and in the p box we need first p */
+     /* FOLLOW BELOW IDEA */
+     /* First go to second last element in selector , then go to pseduo class, there once we see the word 'type' go back to identify kiska 'type' chahiye -wo kya hota h? last element in selector . then after gathering the 'type' elements pick up te first of each groups */
+     /* 1      3      (2-0, 2-1) 2-1 is the type, 2-0 is 'first' here   */
+    .container p:first-of-type{
+        color:red;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <!-- First child -->
+        <div class="box1">
+            <h3>Box1 heading</h3>
+            <p>Box1 paragraph 1</p>
+            <!-- ABOVE WILL BE PRINTED -->
+            <p>Box1 paragraph 2</p>
+            <p>Box1 paragraph 3</p>
+            <p>Box1 paragraph 4</p>
+        </div>
+        <!-- Second child -->
+        <p>Container paragraph 1</p>
+        <!-- ABOVE WILL BE PRINTED -->
+        <!-- Third child -->
+        <p>Container paragraph 2</p>
+        <!-- Fourth child -->
+        <div class="box2">
+            <p>Box2 paragraph 1</p>
+            <!-- ABOVE WILL BE PRINTED -->
+            <p>Box2 paragraph 2</p>
+            <p>Box2 paragraph 3</p>
+        </div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+     /*last-of-type is applied only to child*/
+     /* DONOT FOLLOW BELOW IDEA, JUST KEEPING IT HERE TO GAIN EXTRA VISUALIZATION */
+     /*for each parent classify the different tags (by types) into different boxes and maintain the order in which they appear in html doc, then see which element is required in the css selector and pick the first of that css selector's tag's box */
+     /* For example here we have div-box1, p,p, div-box2 these 4 children. Putting them into boxes(or types) we have div and p. Now looking at the selector we find that we need the p box and in the p box we need first p */
+     /* FOLLOW BELOW IDEA */
+     /* 1      3  (2-0,2-1) 2-1 is the type and 2-0 is the position*/
+    .container p:last-of-type{
+        color:red;
+    }
+    /* sequence->1 ,2-1,3,2-0 */
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <!-- First child -->
+        <div class="box1">
+            <h3>Box1 heading</h3>
+            <p>Box1 paragraph 1</p>
+            <p>Box1 paragraph 2</p>
+            <p>Box1 paragraph 3</p>
+            <p>Box1 paragraph 4</p>
+            <!-- Above will be printed -->
+        </div>
+        <!-- Second child -->
+        <p>Container paragraph 1</p>
+        <!-- Third child -->
+        <p>Container paragraph 2</p>
+        <!-- Above will be printed -->
+        <!-- Fourth child -->
+        <div class="box2">
+            <p>Box2 paragraph 1</p>
+            <p>Box2 paragraph 2</p>
+            <p>Box2 paragraph 3</p>
+            <!-- Above will be printed -->
+        </div>
+    </div> 
+</body>
+</html>

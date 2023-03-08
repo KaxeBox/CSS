@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* box level */
+    background-color: rosybrown;
+}
+/* https://www.w3schools.com/css/css_max-width.asp */
+.main{
+    /* Setting CONTENT width to 400px */
+    width:400px;
+    /* making width smaller because div is a block element , i.e it spans the whole width of the screen. When we make width smaller and give margin of auto(left and right here) ,what the program does is to align div to the center by diving the screenwidth-400px/2  */
+    margin:100px auto 0px auto ;
+}
+/* 360 * 27.2 and padding of 20px */
+h2{
+    text-align: center;
+    padding:20px;
+    font-family: sans-serif;
+}
+/* div.register ko background color agar no transparency ke saath denge toh since it is sitting on top of it's parent, it will hide the area it covers with its' own background */
+div.register{
+    background-color: rgba(0, 0, 0, 0.2);
+    width:100%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+
+}
+
+form#register{
+    margin:40px;
+}
+label{
+    font-family: sans-serif;
+    font-size:18px;
+    font-style: italic;
+}
+
+input#name{
+    width:300px;
+    /* focus does not work on input tag unless we comment out the border property below->reason-don't know yet */
+    /* border: 1px solid black; */
+    /* border-radius: 3px;*/
+    background-color: white;
+
+}
+
+input#Submit{
+    width:300px;
+    padding:7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    border-radius: 3px;
+    background-color: rgba(250,100,0,0.8);
+    color: #fff;
+    cursor:pointer;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+} 
+
+label,h2,span{
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+/* Applied on text,number,email. Border is not applied on radio, and checkbox */
+/* 1 */
+/* input:focus{
+    border:4px solid yellow;
+    /* Boc shadow with focus  works on radio and checkbox types */
+    /* Difference between focus  */
+    /* box-shadow: 0 0 0 3px red; */
+ /* 2 */
+ /* We can remove span also */
+
+input[type="radio"]:checked + span{
+    /* box shaow with checked does not work on radio and checkbox types. We should use 'outline' property */
+    outline: 2px solid yellow;
+}
+/* 3 */
+/* input:disabled{
+    border: 2px solid red;
+} */
+
+/* 4 */
+/* input:enabled{
+    /* input tags are enabled by default */
+    /* border: 2px solid blue; */
+
+/* 5 */
+/* Every field is optional by default */
+/* When we givve required parameter in html , what happens is when we submit the form , the particular tag with required parameter shows the notification to fill out the field , otherwise the form will not be submitted
+all tags are optional by default, it means that we can submit the form without giving any input as well for optional parameters */
+input:required{
+    outline: 2px solid yellowgreen;
+}
+/* 6 */
+input:optional{
+    outline: 2px solid brown;
+}
+/* 7 */
+/* In-range and out-range is applied only on NUMBERS
+For numbers using HTML , we can give a MIN and MAX range, when user inputs a number which goes beyong the range and clicks on SUBMIT, the pop up shows up saying to fill the data between the range
+Now, the issue is that we do not get to know the error until we submit the form, hence we can use CSS, to show that number should be entered in range ->we can do so by changing color of border or apply some other style as well*/
+/* input:in-range{
+    /* The box shows outline color even when we haven't entered data. Hence inrange works for empty and inrange values  
+    outline: 10px solid green;
+} */
+/* 8 */
+/* input:out-of-range{
+    outline:20px solid red;
+} */
+/* 9 */
+/* Applies to the tags which have readonly attribute */
+input:read-only{
+    border:3px solid blue;
+}
+/* 10 */
+/* Read write is applied on fields by default */
+/*IMPORTANT->> Read write applies on radio and checkbox types too */
+input:read-write{
+   
+ border: 3px solid saddlebrown;
+}
+/* 11 */
+/* Valid and invalid types
+No HTML attribute should be given for this 
+When entered data by user is correct , it is considered as valid and when invalid data is provided -for example wrong email id format then it is considered invalid */
+input:invalid{
+    border: 3px solid yellowgreen;
+    /* Example enter : kul in email id box */
+}
+/* 12 */
+/* It is applied on both radio and checkbox as well */
+input:valid{
+    outline: 10px solid aquamarine;
+}
+
+/* 13 */
+input:default +span{
+    color:red;
+}

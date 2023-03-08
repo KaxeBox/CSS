@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* First go till second last element in selector to find the scope , then go to pseudo class, and find all the elements which satisfy the pseudo class, go back to last element in selector and filter out the element among the elements found via pseudo class selector */
+        /* ol:only-child {
+    color: fuchsia; */
+    /* does not apply to any element, since no 'ol' is an only-child of its' parent */
+/* } */
+li:only-child{
+    color:red;
+}
+b:only-child{
+    color:lightblue;
+}
+
+
+    </style>
+</head>
+<body>
+    <p>Stars expected to attend:</p>
+<ol>
+    <li>Robert Downey, Jr.</li>
+    <!-- li:only child ---PRINTS THE ABOVE LINE -->
+</ol>
+
+<p>Stars yet to confirm:</p>
+<ol>
+    <li>Scarlett Johansson</li>
+    <li>Samuel L. Jackson</li>
+    <li>Chris Pratt</li>
+</ol>
+
+<p>The ceremony is going to be held in <b>The Dolby Theatre</b>.</p>
+
+</body>
+</html>

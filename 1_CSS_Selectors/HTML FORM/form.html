@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        /* Body occupies the WHOLE BROWSER AREA(ALL LENGTH AND WIDTH) */
+        /* body{
+            background-color: red;
+        } */
+        /* Since main's only child is div, main div will only occupy how much space is required by the child,there is no difference b/w space occupied by both of them, they overlap completely */
+        /* .main{
+            background-color: red;
+        }
+        .register{
+            background-color: blue;
+        } */
+
+    </style>
+</head>
+<!-- body takes margin by default -->
+<body>
+    <div class="main">
+        <div class="register">
+            <!-- Takes margin by default -->
+            <h2>Register here</h2>
+            <!-- form method means??? -->
+
+            <form id="register" method="post">
+                <label >First Name: </label>
+                <br>
+                <!-- The name attribute specifies the name of an <input> element.
+
+The name attribute is used to reference elements in a JavaScript, or to reference form data after a form is submitted.
+
+Note: Only form elements with a name attribute will have their values passed when submitting a form. -->
+                <input type="text" name="fname" id="name" placeholder="Enter your first name">
+                <br>
+                <br>
+                <label> Last Name: </label>
+                <br>
+                <!-- applied disabled below to test the disabled pseudo selector -->
+                <!-- <input type="text" name="lname" id="name" placeholder="Enter your last name" disabled> -->
+                <!-- <input type="text" name="lname" id="name" placeholder="Enter your last name" required="true" > -->
+                <input type="text" name="lname" id="name" placeholder="Enter your last name" value="Read only" readonly >
+                <br>
+                <br>
+                <label>Your Age: </label>
+                <br>
+                <!-- applied disabled below to test the disabled pseudo selector -->
+                <!-- <input type="number" name="age" id="name" placeholder="How old are you?" disabled> -->
+                <input type="number" name="age" id="name" placeholder="How old are you?" min="18" max="40" >
+                <br>
+                <br>
+                <label>Email id: </label>
+                <br>
+                <input type="email" name="email" id="name" placeholder="Enter your valid email id" >
+                <br>
+                <br>
+                <label>Gender: </label>
+                <br>
+                &nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" id="male">
+                &nbsp;
+                <span id="male">Male</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="radio" name="gender" id="female" checked>
+                &nbsp;
+                <span id="female">Female</span>
+                <br>
+                <br>
+                <label>Known language: </label>
+                <br>
+                &nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="lang" id="hindi" checked>
+                &nbsp;
+                <span id="hindi">Hindi</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="lang" id="English">
+                &nbsp;
+                <span id="English">English</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" name="lang" id="Urdu">
+                &nbsp;
+                <span id="Urdu">Urdu</span>
+                <br>
+                <br>
+                <input type="submit" value="Submit" id="Submit" name=""Submit>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

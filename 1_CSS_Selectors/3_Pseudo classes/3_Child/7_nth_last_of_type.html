@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>   
+    /* Reach till container (second last element) , then upon observing the word 'type' find all the last element in selector(p here) and then go to target the positions(here we find the positions from last) */
+    .container p:nth-last-of-type(4){
+        color:red;
+    }
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <!-- First child -->
+        <div class="box1">
+            <h3>Box1 heading</h3>
+            <p>Box1 paragraph 1</p>
+            <!-- ABOVE WILL BE PRINTED -->
+            <p>Box1 paragraph 2</p>
+            <p>Box1 paragraph 3</p>
+            <p>Box1 paragraph 4</p>
+        </div>
+        <!-- Second child -->
+        <p>Container paragraph 1</p>
+        <!-- Third child -->
+        <p>Container paragraph 2</p>
+        <!-- Fourth child -->
+        <div class="box2">
+            <p>Box2 paragraph 1</p>
+            <p>Box2 paragraph 2</p>
+            <p>Box2 paragraph 3</p>
+        </div>
+    </div> 
+</body>
+</html>
